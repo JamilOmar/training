@@ -16,6 +16,12 @@ namespace Training
             next = null;
         }
 
+        public LinkNode()
+        {
+           
+            next = null;
+        }
+
      
 
         public void append(T v)

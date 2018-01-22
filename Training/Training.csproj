@@ -36,6 +36,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LinkNode.cs" />
     <Compile Include="LinkNodeHelper.cs" />
+    <Compile Include="ArrayHelper.cs" />
+    <Compile Include="Algorithms.cs" />
+    <Compile Include="Queue.cs" />
+    <Compile Include="Stack.cs" />
+    <Compile Include="Element.cs" />
+    <Compile Include="SpecialBinary.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
