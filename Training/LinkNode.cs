@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace Training
 {
-    public class LinkNode<T>
+    public class LinkNode<T> 
     {
         T val;
         LinkNode<T> next;
@@ -47,5 +47,6 @@ namespace Training
             }
             
         }
+
     }
 }

@@ -42,6 +42,9 @@
     <Compile Include="Stack.cs" />
     <Compile Include="Element.cs" />
     <Compile Include="SpecialBinary.cs" />
+    <Compile Include="SortAlgorithms.cs" />
+    <Compile Include="BinarySearch.cs" />
+    <Compile Include="BinaryTree.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

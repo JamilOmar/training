@@ -433,6 +433,61 @@ Try to do this in one pass.
 
         }
 
+        /*
+        public LinkNode<T> Merge(LinkNode<T> a ,LinkNode<T> b)
+        {
+
+            LinkNode<T> ptrA = a;
+
+            LinkNode<T> ptrB = b;
+
+            LinkNode<T> c  = new LinkNode<T>();
+
+            LinkNode<T> ptrC = c;
+
+
+            while(ptrA!=null && ptrB!=null)
+            {
+                if(ptrA.Val <=ptrB.Val)
+                {
+                    ptrC.append(ptrA.Val);
+                    ptrA = ptrA.Next;
+                    ptrC = ptrC.Next;
+
+                  
+                }
+                else
+                {
+                    ptrC.append(ptrB.Val);
+                    ptrB = ptrB.Next;
+                    ptrC = ptrC.Next;
+                }
+
+            }
+
+            while (ptrA != null )
+            {
+              
+                    ptrC.append(ptrA.Val);
+                    ptrA = ptrA.Next;
+                    ptrC = ptrC.Next;
+
+            }
+            while (ptrB != null)
+            {
+               
+                    ptrC.append(ptrB.Val);
+                    ptrB = ptrB.Next;
+                    ptrC = ptrC.Next;
+
+
+            }
+            return c;
+
+
+
+        }
+*/
         public LinkNode<T> RemoveNthFromEnd(LinkNode<T> head, int n)
         {
 

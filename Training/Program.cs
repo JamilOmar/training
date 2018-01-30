@@ -358,11 +358,51 @@ namespace Training
             Console.WriteLine(res);
 
         }
-      
 
+        static void Test_GroupAnagrams()
+        {
+
+
+
+
+            var res = Algorithms.GroupAnagrams(new string[] {"eat", "tea", "tan", "ate", "nat", "bat" });
+            Console.WriteLine(res);
+
+        }
+
+
+        static void Test_Multiply()
+        {
+
+
+
+
+            var res = Algorithms.Multiply("40","22");
+            Console.WriteLine(res);
+
+        }
+
+
+        static void Test_PrintLevelOrder()
+        {
+
+            BinaryTree tr = new BinaryTree();
+            tr.root = new TreeNode(1);
+            tr.root.left = new TreeNode(2);
+            tr.root.right = new TreeNode(3);
+            tr.root.left.left = new TreeNode(4);
+            tr.root.left.right = new TreeNode(5);
+
+
+            tr.PrintLevelOrder();
+
+
+        }
+      
+       
         public static void Main(string[] args)
         {
-           Test_IsPalindromeAlgorithmTwo();
+            Test_PrintLevelOrder();
            
            
 
