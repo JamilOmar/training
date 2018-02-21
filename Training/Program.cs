@@ -126,7 +126,7 @@ namespace Training
 
             int[] data = new[] { 1, 2, 3, 4, 5, 6 };
 
-            ArrayHelper.Rotate(data,1);
+            ArrayHelper.Rotate(data,3);
            
             Console.WriteLine(data);
             Console.WriteLine();
@@ -398,11 +398,121 @@ namespace Training
 
 
         }
+
+        static void Test_PrintBFS()
+        {
+
+            BinaryTree tr = new BinaryTree();
+            tr.root = new TreeNode(1);
+            tr.root.left = new TreeNode(2);
+            tr.root.right = new TreeNode(3);
+            tr.root.left.left = new TreeNode(4);
+            tr.root.left.right = new TreeNode(5);
+
+
+            tr.BFSQueue();
+
+
+        }
+
+        static void Test_PrintSerialize()
+        {
+
+            BinaryTree tr = new BinaryTree();
+            tr.root = new TreeNode(1);
+            tr.root.left = new TreeNode(2);
+            tr.root.right = new TreeNode(3);
+            tr.root.left.left = new TreeNode(4);
+            tr.root.left.right = new TreeNode(5);
+
+
+            var result =  tr.Serialize();
+
+
+        }
+
+
+        static void Test_PrintLinkedList()
+        {
+
+            BinaryTree tr = new BinaryTree();
+            tr.root = new TreeNode(1);
+            tr.root.left = new TreeNode(2);
+            tr.root.right = new TreeNode(3);
+            tr.root.left.left = new TreeNode(4);
+            tr.root.left.right = new TreeNode(5);
+            tr.FromTreeToLinkedList();
+
+
+        }
+
+
+
+        static void Test_WildcardMatching()
+        {
+
+
+
+            var res = Algorithms.isMatch("pp", "pp");
+            var res1 = Algorithms.isMatch("pp", "p?");
+
+            var res2 = Algorithms.isMatch("pp", "*?");
+
+            var res3 = Algorithms.isMatch("pp", "*");
+
+            var res4 = Algorithms.isMatch("pp", "kl");
+        }
+
+
+
+
+        static void Test_MinSubstring()
+        {
+
+            var res= Algorithms.MinWindow("ADOBECODEBANC","ABC");
+            Console.WriteLine(res);
+
+        }
+      
+        static void Test_ReverseKGroup()
+        {
+            LinkNode<int> lnkNodeEspecial = new LinkNode<int>(1);
+            lnkNodeEspecial.append(2);
+            lnkNodeEspecial.append(3);
+            lnkNodeEspecial.append(4);
+            lnkNodeEspecial.append(5);
+            lnkNodeEspecial.append(6);
+            lnkNodeEspecial = LinkNodeHelper<int>.ReverseKGroup(lnkNodeEspecial, 2);
+       
+            lnkNodeEspecial.print();//[1,4,3,2,5]
+
+        }
+
+        static void Test_ReverseAsync()
+        {
+            LinkNode<int> lnkNodeEspecial = new LinkNode<int>(1);
+            lnkNodeEspecial.append(2);
+            lnkNodeEspecial.append(3);
+            lnkNodeEspecial.append(4);
+            lnkNodeEspecial.append(5);
+            lnkNodeEspecial = LinkNodeHelper<int>.ReverseAsync(lnkNodeEspecial);
+
+            lnkNodeEspecial.print();//[1,4,3,2,5]
+
+        }
+
+        static void Test_ExcelTile()
+        {
+
+            var res= Algorithms.ExcelTile(67);
+            Console.WriteLine(res);
+
+        }
       
        
         public static void Main(string[] args)
         {
-            Test_PrintLevelOrder();
+            Test_ReverseAsync();
            
            
 

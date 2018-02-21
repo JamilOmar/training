@@ -655,7 +655,98 @@ For example,
 
         }
         */
+
+
+        public static bool isMatch(string s , string p)
+        {
+            bool match = false;
+            if (String.IsNullOrEmpty(p))
+                return String.IsNullOrEmpty(s);
+
+            int j = 0;
+            int i = 0;
+
+
+            while(i < s.Length)
+            {
+
+                if(j<p.Length)
+                {
+                    if(s[i] == p[j] || p[j] =='?' || p[j]=='*')
+                        match = true;
+
+                }else
+                {
+                    match = (p[j - 1] == '*');
+                }
+
+
+                if (j < p.Length)
+                    j++;
+
+                i++;
+            }
+
+
+
+
+            return match;
+        }
       
+
+
+        public static string MinWindow(string text, string pattern)
+        {
+            int[] map = new int[128];
+            foreach(var c in pattern)
+            {
+                map[c]++;
+
+
+            }
+            int counter = pattern.Length; int start = 0; int end = 0; int minL = Int32.MaxValue; int minStart = 0;
+            while (end < text.Length)
+            {
+                if (map[text[end]] > 0)
+                {
+                    counter--;
+                }
+                    map[text[end]]--;
+                end++;
+                while (counter == 0)
+                {
+                    if (end - start < minL) { minStart = start; minL = end - minStart; }
+
+                    map[text[start]]++;
+                    if (map[text[start]]>0){
+                        counter++;
+
+                    }
+                    start++;
+                }
+
+            }
+            return minL == Int32.MaxValue ? "" : text.Substring(minStart, minL);
+            
+        }
+
+        public static string ExcelTile(int n)
+        {
+            string text = "";
+
+            while(n > 0)
+            {
+
+                n--;
+
+                text = ( (char)((n % 26) + 'A')).ToString() + text;
+
+                n = n / 26;
+            }
+            return text;
+        }
+
+
         public Algorithms()
         {
         }

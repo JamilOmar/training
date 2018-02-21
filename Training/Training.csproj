@@ -45,6 +45,7 @@
     <Compile Include="SortAlgorithms.cs" />
     <Compile Include="BinarySearch.cs" />
     <Compile Include="BinaryTree.cs" />
+    <Compile Include="Graph.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
