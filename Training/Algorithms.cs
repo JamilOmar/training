@@ -6,6 +6,84 @@ namespace Training
 {
     public class Algorithms
     {
+        
+        	List<IList<int>> perms = new List<IList<int>>();
+	
+	public void CreatePermutations(int[] nums ,int start , int end)
+{
+	
+	if(start == end)
+	{
+		
+		List<int> tmp = new List<int>(nums);	
+		
+		perms.Add(tmp);
+		return; 
+	}	
+		
+	for(int i = start ; i<= end  ; i++)
+	{
+		
+		Swap(nums, start ,i);
+		CreatePermutations(nums ,start +1 , end);
+			
+		Swap(nums,i,start);	
+		
+	}
+
+	
+}
+	
+	
+   public void PowerSet(int[] nums)
+   {
+	   
+	   
+	 
+	   
+	   double p = Math.Pow( 2, nums.Length);
+	   
+	   for(int i = 0 ; i < p ; i ++)
+	   {
+		   List<int> results = new List<int>();
+		   for(int j = 0 ; j < nums.Length ; j ++)
+		   {
+			     
+			   if((i &(1<<j))!=0)
+				{
+				   results.Add(nums[j]);
+			
+			    }
+		   }
+		   
+		  Console.WriteLine(string.Join(",",results.ToArray()));
+	   }
+		   
+	   
+	   
+   }
+	
+	
+	public void Swap(int[] nums , int x, int y)
+	{
+		int temp = nums[x];
+		
+		nums[x] = nums[y];
+		nums[y] =temp;
+		
+	}
+	
+	
+	public void Print()
+	{
+		
+		foreach(var x in perms)
+		{
+			Console.WriteLine(string.Join(",",x));
+		}
+		
+	}
+		
 
         /*
          * 
